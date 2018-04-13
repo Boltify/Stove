@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Mrs+Sheppards');
+
+
+/* Skeleton */
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #fff;
+	color: #253858;
+	margin: 0;
+	padding: 0;
+}
+
+
+.pull-left {
+	display: block;
+	float: left;
+	text-align: left;
+}
+
+.pull-right {
+	margin-left: 10px;
+	display: block;
+	float: right;
+	text-align: right;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.button {
+	border: none;
+	color: #fff;
+	text-decoration: none;
+	margin: 5px 2px;
+	padding: 10px 15px;
+	background-color: rgba(0,0,0,0.05);
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.button:hover {
+	color: #fff;
+	background-color: #f52549;
+	border-radius: 3px;
+}
+
+.edit {
+	text-align: right;
+	float: right;
+}
+
+.large {
+	
+}
+
+.bold {
+	font-weight: bold;
+}
+
+a {
+	color: rgba(0,0,0,0.1);
+}
+
+a:hover {
+	color: #fff;
+}
+
+
+/* header **************************************************************/
+
+.header {
+	/* background-color: #fcc118; */
+	background-color: #fa6775;
+	color: #fff;
+	position: static;
+	top: 0;
+	height: 50px;
+	padding: 0 10px;
+}
+
+.header-flex {
+	display: flex;
+}
+
+.header-container {
+	flex: 1;
+}
+
+.header-container:last-child ul {
+	float:right;
+}
+
+
+.header ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font-weight: bold;
+}
+
+.header li {
+	float: left;
+}
+
+.header li a {
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	margin: 5px 2px;
+	padding: 10px 15px;
+	background-color: rgba(0,0,0,0.05);
+	border-radius: 3px;
+}
+
+.header li a:hover {
+	color: #fff;
+	background-color: #f52549;
+	border-radius: 3px;
+}
+
+
+
+.logo a {
+	color: #fff;
+	font-size: 32px;
+	padding-top: 4px;
+	text-align: middle;
+}
+
+/* Columns **************************************************************/
+
+.container-flex {
+	padding: 10px 8px;
+	display: flex;
+}
+
+.column-container {
+	margin: 0 4px;
+	border: 2px solid#fa6775;
+	flex: 1;
+}
+
+.column-header {
+	padding: 10px;
+	background-color: #fa6775;
+	color: #fff;
+}
+
+.column-header p {
+	margin: 0;
+	font-weight: bold;
+}
+
+.column-body {
+	padding: 10px;
+}
+
+
+
+/* Tasks **************************************************************/
+
+.task {
+	border-left: 3px solid orange;
+	margin: 4px 0;
+	background-color: #fff;
+	box-shadow: 2px 2px rgba(0,0,0,.12);
+	padding: 3px;
+	box-shadow: 2px 2px rgba(0,0,0,.12);
+}
+
+
+.task-header {
+	font-weight: bold;
+	text-transform: none;
+}
+
+.task-header p {
+	margin: 8px 0;
+}
+
+.task-header, .task-main, .task-footer {
+	padding: 0 5px;
+}
+
+.task-footer {
+}
+
+.task-footer-date {
+	text-align: right;
+	float: right;
+	font-size: 10px;
+	margin-top: 9px;
+	font-weight: bold;
+}
+
+.task-footer img {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+
+.priority-critical {
+	border-left: 3px solid #ff5252;
+}
+
+.priority-high {
+	border-left: 3px solid #ffc107;
+}
+
+.priority-normal {
+	border-left: 3px solid #2196f3;
+}
+
+.priority-low {
+	border-left: 3px solid #4caf50;
+}
+
+/* Modal **************************************************************/
+
+.modal {
+    z-index: 3;
+    display: none;
+    padding-top: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6)
+}
+
+.modal-container {
+    display: flex;
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 10px;
+    outline: 0;
+    width: 600px
+}
+
+.modal-container button:first-child {
+    margin-left: 10px;
+}
+
+.modal-container input, .modal-container textarea, .modal-container select {
+    display: block;
+    width: 50%;
+    margin: 2px 0 10px 0;
+}
+
+.modal-container label {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.modal-column {
+    flex: 1;
+    padding: 0 10px;
+    margin: 10px;
+}
+
+
+
+
+
+.modal-button {
+    border: none;
+    display: inline-block;
+    padding: 4px 8px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;;
+    background-color: #253858;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.modal-display-top-right{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+
+
