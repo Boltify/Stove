@@ -38,23 +38,6 @@ body {
 	text-align: center;
 }
 
-.button {
-	border: none;
-	color: #fff;
-	text-decoration: none;
-	margin: 5px 2px;
-	padding: 10px 15px;
-	background-color: rgba(0,0,0,0.05);
-	border-radius: 3px;
-	cursor: pointer;
-}
-
-.button:hover {
-	color: #fff;
-	background-color: #f52549;
-	border-radius: 3px;
-}
-
 .edit {
 	text-align: right;
 	float: right;
@@ -81,8 +64,8 @@ a:hover {
 
 .header {
 	/* background-color: #fcc118; */
-	background-color: #fa6775;
-	color: #fff;
+	/* background-color: #fa6775; // Pink */
+	background-image: linear-gradient(139deg, #7D2AE8 0%, #00C4CC 100%);
 	position: static;
 	top: 0;
 	height: 50px;
@@ -131,73 +114,141 @@ a:hover {
 }
 
 
+.header-button {
+	border: none;
+	color: #fff;
+	text-decoration: none;
+	margin: 5px 2px;
+	padding: 10px 15px;
+	background-color: rgba(0,0,0,0.05);
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.header-button:hover {
+	color: #fff;
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 3px;
+}
+
 
 .logo a {
 	color: #fff;
-	font-size: 32px;
-	padding-top: 4px;
+	font-size: 42px;
 	text-align: middle;
 }
 
-/* Columns **************************************************************/
+/* Content **************************************************************/
 
-.container-flex {
+.content {
+	background-color: #f9f8f3;
+	height: 100vh;
+}
+
+/* Lists **************************************************************/
+
+.list-container-flex {
 	padding: 10px 8px;
 	display: flex;
 }
 
-.column-container {
+.list-container {
 	margin: 0 4px;
-	border: 2px solid#fa6775;
 	flex: 1;
 }
 
-.column-header {
+.list-header {
 	padding: 10px;
-	background-color: #fa6775;
-	color: #fff;
+	/* background-color: #fa6775; */
+	/* color: #fff; */
 }
 
-.column-header p {
+.list-header p {
 	margin: 0;
 	font-weight: bold;
 }
 
-.column-body {
+.list-body {
 	padding: 10px;
+	min-height: 300px;
+}
+
+input[type=text] {
+	margin: 4px 0;
+	padding: 9px;
+	border: 2px solid #ddd;
+	border-radius: 3px;
+	width: 80%;
+	font-weight: bold;
 }
 
 
+.list-button {
+	border: none;
+	color: #fff;
+	text-decoration: none;
+	margin: 5px 2px;
+	padding: 10px 15px;
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 3px;
+	cursor: pointer;
+	float: right;
+	/* width: 100%; */
+}
 
-/* Tasks **************************************************************/
+.list-button:hover {
+	color: #fff;
+	background-color: #f52549;
+	border-radius: 3px;
+}
 
-.task {
+
+/* cards **************************************************************/
+
+.card {
 	border-left: 3px solid orange;
 	margin: 4px 0;
 	background-color: #fff;
-	box-shadow: 2px 2px rgba(0,0,0,.12);
 	padding: 3px;
-	box-shadow: 2px 2px rgba(0,0,0,.12);
+	/* box-shadow: 2px 2px rgba(0,0,0,.12); */
+	/* box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08); */
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16);
+	cursor: pointer;
 }
 
 
-.task-header {
+.card {
+    background: #fff;
+    position: relative;
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    /* border-top: 14px solid #2196f3;
+    border-left: 14px solid #fff; */
+    width: 0;
+}
+
+.card-header {
 	font-weight: bold;
 	text-transform: none;
-}
-
-.task-header p {
 	margin: 8px 0;
 }
 
-.task-header, .task-main, .task-footer {
+.card-header p {
+	margin: 8px 0;
+}
+
+.card-header, .card-main, .card-footer {
 	padding: 0 5px;
 }
 
-.task-footer {
+.card-footer {
 }
 
-.task-footer-date {
+.card-footer-date {
 	text-align: right;
 	float: right;
 	font-size: 10px;
@@ -205,7 +256,7 @@ a:hover {
 	font-weight: bold;
 }
 
-.task-footer img {
+.card-footer img {
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
@@ -268,7 +319,7 @@ a:hover {
     margin: 10px 0;
 }
 
-.modal-column {
+.modal-list {
     flex: 1;
     padding: 0 10px;
     margin: 10px;
